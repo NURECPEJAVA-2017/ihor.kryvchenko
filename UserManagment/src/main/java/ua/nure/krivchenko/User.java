@@ -48,17 +48,25 @@ public class User {
         int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
         int currentMonth = calendar.get(Calendar.MONTH);
         int currentYear = calendar.get(Calendar.YEAR);
+
         calendar.setTime(getDateOfBirth());
 
-        int day = calendar.get(calendar.DAY_OF_MONTH);
-        int month = calendar.get(calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        int month = calendar.get(Calendar.MONTH);
         int year = calendar.get(Calendar.YEAR);
 
-        //(currentMonth < month)
+        if(currentMonth < month) {
+            int recivedYear = currentYear - year + 1 ;
+            return recivedYear;
+        }
 
-        int recivedYear = currentYear - year - 1;
+        else if(currentMonth == month && currentDay < day) {
+            int recivedYear = currentYear - year + 1;
+            return recivedYear;
+        }
+
+        int recivedYear = currentYear - year ;
         return recivedYear;
-
     }
 
 }
