@@ -9,9 +9,9 @@ import java.util.Date;
 
 public class UserTest extends TestCase {
 
-    private static final int DAY_OF_BIRTH_FEATURE = 8;
+    private static final int DAY_OF_BIRTH_FUTURE = 8;
     private static final int DAY_OF_BIRTH_TODAY = Calendar.DAY_OF_MONTH;
-    private static final int MONTH_OF_BIRTH_FEATURE = Calendar.JANUARY;
+    private static final int MONTH_OF_BIRTH_FUTURE = Calendar.JANUARY;
     private static final int MONTH_OF_BIRTH_NOT_BEGAN = Calendar.NOVEMBER;
 
 
@@ -40,9 +40,9 @@ public class UserTest extends TestCase {
         assertEquals("Igor Krivchenko", fullName);
     }
     @Test
-    public void testAgeDayFeatureButMonthGoes1(){
+    public void testAgeDayFutureButMonthGoes1(){
         Calendar calendar = Calendar.getInstance();
-        calendar.set(YEAR_OF_BIRTH,MOTH_OF_BIRTH,DAY_OF_BIRTH_FEATURE);
+        calendar.set(YEAR_OF_BIRTH,MOTH_OF_BIRTH,DAY_OF_BIRTH_FUTURE);
         dateOfBirthd = calendar.getTime();
 
         user.setDateOfBirth(dateOfBirthd);
@@ -53,7 +53,7 @@ public class UserTest extends TestCase {
     @Test
     public void testAgeMonthPassedInThisYear2(){
         Calendar calendar = Calendar.getInstance();
-        calendar.set(YEAR_OF_BIRTH,MONTH_OF_BIRTH_FEATURE,DAY_OF_BIRTH);
+        calendar.set(YEAR_OF_BIRTH,MONTH_OF_BIRTH_FUTURE,DAY_OF_BIRTH);
         dateOfBirthd = calendar.getTime();
 
         user.setDateOfBirth(dateOfBirthd);
@@ -72,7 +72,7 @@ public class UserTest extends TestCase {
         assertEquals(ETALONE_AGE,Age);
     }
     @Test
-    public void testAgeMonthGoesButDayFeature4(){
+    public void testAgeMonthGoesButDayFuture4(){
         Calendar calendar = Calendar.getInstance();
         calendar.set(YEAR_OF_BIRTH,MOTH_OF_BIRTH,DAY_OF_BIRTH);
         dateOfBirthd = calendar.getTime();
