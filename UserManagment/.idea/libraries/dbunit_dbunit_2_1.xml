@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="dbunit:dbunit:2.1" type="repository">
+    <properties maven-id="dbunit:dbunit:2.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/dbunit-2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

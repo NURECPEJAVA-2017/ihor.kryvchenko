@@ -1,8 +1,9 @@
-package ua.nure.krivchenko;
+package test.java.ua.nure.krivchenko;
 
 import com.sun.org.apache.xalan.internal.xsltc.dom.CachedNodeListIterator;
 import junit.framework.TestCase;
 import org.junit.Test;
+import ua.nure.krivchenko.User;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -47,7 +48,7 @@ public class UserTest extends TestCase {
 
         user.setDateOfBirth(dateOfBirthd);
         int Age = user.getAge();
-        assertEquals(ETALONE_AGE,Age-1);
+        assertEquals(ETALONE_AGE,Age++);
     }
 
     @Test
